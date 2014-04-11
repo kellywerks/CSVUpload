@@ -1,0 +1,12 @@
+<% content_for(:title, "Products | Amazon") %>
+
+<h1>Products</h1>
+
+<ul>
+<% @products.each do |product| %>
+  <li><%= link_to product.name , product_path(product.id) %><br> <%= number_to_currency(product.price, :unit => '$') %> </li>
+  <% end %>
+</ul>
+
+<%= link_to "Add New Product", new_product_path %>
+

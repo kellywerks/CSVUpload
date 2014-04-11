@@ -1,0 +1,26 @@
+<% content_for(:title, "New Product | Amazon") %>
+
+<h1>Add a New Product</h1>
+
+<%= form_for @product do |f| %>
+  <div class = "row">
+    <div class="large-4 columns">
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+    </div>
+  </div>
+  <div class = "row">
+    <div class="large-4 columns">
+      <%= f.label :price %>
+      <%= f.text_field :price %>
+    </div>
+  </div>
+  <div class = "row">
+    <div class="large-4 columns">
+      <%= f.label :desc %>
+      <%= f.text_area :desc %>
+    </div>
+  </div>
+  <%= f.submit %>
+<% end %>
+

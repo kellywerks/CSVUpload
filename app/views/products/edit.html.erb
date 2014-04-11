@@ -1,0 +1,25 @@
+<% content_for(:title, "Edit #{@product.name} | Amazon") %>
+
+<h1>Edit <%= @product.name %></h1>
+
+<%= form_for @product do |f| %>
+  <div class = "row">
+    <div class="large-4 columns">
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+    </div>
+  </div>
+  <div class = "row">
+    <div class="large-4 columns">
+      <%= f.label :price %>
+      <%= f.text_field :price %>
+    </div>
+  </div>
+  <div class = "row">
+    <div class="large-4 columns">
+      <%= f.label :desc %>
+      <%= f.text_area :desc %>
+    </div>
+  </div>
+  <%= f.submit class: 'tiny round button'%>
+<% end %>
