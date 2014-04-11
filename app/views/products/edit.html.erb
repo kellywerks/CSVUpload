@@ -2,6 +2,8 @@
 
 <h1>Edit <%= @product.name %></h1>
 
+<%= render('layouts/errors', :object => @product) %>
+
 <%= form_for @product do |f| %>
   <div class = "row">
     <div class="large-4 columns">
