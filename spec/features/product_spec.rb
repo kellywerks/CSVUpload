@@ -1,12 +1,16 @@
 require 'spec_helper'
 
+def add_valid_product
+  visit '/products/new'
+  fill_in 'Name', :with => 'Capybara Test Item'
+  fill_in 'Price', :with => '20'
+  fill_in 'Desc', :with => "Testing adding a new product description"
+  click_button 'Create Product'
+end
+
 feature "Adding a new product" do
   scenario "Add a new product with validated fields" do
-    visit '/products/new'
-    fill_in 'Name', :with => 'Capybara Test Item'
-    fill_in 'Price', :with => '20'
-    fill_in 'Desc', :with => "Testing adding a new product description"
-    click_button 'Create Product'
+    add_valid_product
     expect(page).to have_content 'Capybara Test Item'
   end
 end
@@ -37,11 +41,7 @@ end
 
 feature "Editing a product" do
   scenario "Edit a product with validated fields" do
-    visit '/products/new'
-    fill_in 'Name', :with => 'Capybara Test Item'
-    fill_in 'Price', :with => '20'
-    fill_in 'Desc', :with => "Testing adding a new product description"
-    click_button 'Create Product'
+    add_valid_product
     click_link 'Capybara Test Item'
     click_link 'edit'
     fill_in 'Name', :with => 'Changed Test Item'
