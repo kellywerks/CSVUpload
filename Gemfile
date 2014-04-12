@@ -9,6 +9,8 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'foundation-rails'
 gem 'bcrypt-ruby'
+gem 'paperclip'
+gem 'smarter_csv'
 
 group :development do
   gem 'better_errors'

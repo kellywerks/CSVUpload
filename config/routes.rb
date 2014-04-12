@@ -9,4 +9,5 @@ Amazon::Application.routes.draw do
   resources :products
   resources :carts
   resources :sessions
+  resources :product_uploads
 end

@@ -1,0 +1,7 @@
+<h1>Product Upload </h1>
+
+
+<%= form_tag('/product_uploads', multipart: true) do%>
+<%= file_field_tag 'product_upload[csv]' %>
+<%= submit_tag 'Submit' %>
+<% end %>
