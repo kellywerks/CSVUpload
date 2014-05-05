@@ -1,6 +1,7 @@
 = Amazon Store
 == Epicodus Assignment 
 Authors: Josh Fowler and Kelly Becker
+
 Used: Ruby, Rails, PostgreSQL, Capybara, ActiveRecord, Foundation
 
 *  [DONE] As a store owner, I want to create a new entry for a product with a name, price, and description.
